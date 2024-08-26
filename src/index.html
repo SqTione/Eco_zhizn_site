@@ -10,6 +10,45 @@
     <link href="./output.css" rel="stylesheet">
 </head>
 <body>
-    <h1 class="font-nauryz text-green-600">Тестовый текст</h1>
+    <div class="w-full h-screen bg-[url('images/main_bg.png')] bg-cover bg-no-repeat">
+        <header class="w-full px-32 pt-10 flex justify-between items-center">
+            <a href="#"><img src="./images/logo.svg" alt="Логотип 'Экожизнь' в виде листка клевера"></a>
+            <nav class="flex-1">
+                <ul class="flex justify-center gap-x-10 text-green-100 text-center text-xl">
+                    <li class="cursor-pointer">Главная</li>
+                    <li class="cursor-pointer">О фестивале</li>
+                    <li class="cursor-pointer">Программа</li>
+                    <li class="cursor-pointer">Контакты</li>
+                </ul>
+            </nav>
+            <div class="flex gap-x-8">
+                <a href="#" class="cursor-pointer transition ease-in hover:scale-125"><img class="" src="./images/icons/vk_rounded.svg" alt="Логотип Вконтакте"></a>
+                <a href="#"><img class="cursor-pointer transition ease-in delay-75 hover:scale-125" src="./images/icons/tg_rounded.svg" alt="Логотип Телеграм"></a>
+            </div>
+        </header>
+        <main class="relative px-32 w-full h-[89%]">
+            <div class="w-1/2 pt-[8rem]">
+                <div>
+                    <p class="font-nauryz text-green-100 text-5xl leading-18 uppercase">Фестиваль</p>
+                    <h1 class="font-nauryz text-green-500 text-7xl leading-20 uppercase">Экожизнь</h1>
+                </div>
+                <div class="pt-8 flex gap-x-12">
+                    <span class="px-16 py-2.5 font-bold text-green-100 text-2xl uppercase bg-green-500 rounded-full">14 сентября</span>
+                    <span class="font-bold text-green-100 text-3xl uppercase">10:30 - 18:00</span>
+                </div>
+                <span class="inline-flex items-center mt-[20px] text-green-100 text-base
+                             before:content-[''] before:inline-block before:w-[50px] before:h-[50px] before:mr-[14px] before:bg-[url('images/icons/location.svg')] before:bg-cover before:bg-center before:bg-no-repeat"
+                    >
+                    наб. Северной двины, 17, САФУ
+                </span>
+            </div>
+            // Выровнять по центру
+            <div class="absolute inline-flex justify-center w-screen bottom-[8rem] gap-x-[10rem]">
+                <a href="#" class="button">Стать участником</a>
+                <a href="#" class="button">Стать партнером</a>
+            </div>
+            <span class="block absolute bottom-[4rem] left-1/2 w-[44px] h-[24px] bg-[url('images/icons/arrow_down.svg')] bg-no-repeat bg-cover bg-center"></span>
+        </main>
+    </div>
 </body>
 </html>
