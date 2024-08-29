@@ -10,45 +10,71 @@
     <link href="./output.css" rel="stylesheet">
 </head>
 <body>
-    <div class="w-full h-screen bg-[url('images/main_bg.png')] bg-cover bg-no-repeat">
-        <header class="w-full px-32 pt-10 flex justify-between items-center">
-            <a href="#"><img src="./images/logo.svg" alt="Логотип 'Экожизнь' в виде листка клевера"></a>
-            <nav class="flex-1">
-                <ul class="flex justify-center gap-x-10 text-green-100 text-center text-xl">
-                    <li class="cursor-pointer">Главная</li>
-                    <li class="cursor-pointer">О фестивале</li>
-                    <li class="cursor-pointer">Программа</li>
-                    <li class="cursor-pointer">Контакты</li>
-                </ul>
-            </nav>
-            <div class="flex gap-x-8">
-                <a href="#" class="cursor-pointer transition ease-in hover:scale-125"><img class="" src="./images/icons/vk_rounded.svg" alt="Логотип Вконтакте"></a>
-                <a href="#"><img class="cursor-pointer transition ease-in delay-75 hover:scale-125" src="./images/icons/tg_rounded.svg" alt="Логотип Телеграм"></a>
+<div class="px-[7.5rem] w-full h-screen bg-[url('images/main_bg.png')] bg-cover bg-no-repeat xl:px-[2.5rem] md:!px-[1.5rem]">
+    <header class="w-full pt-10 flex justify-between items-center">
+        <a class="xl:w-[3rem]" href="#"><img src="./images/logo.svg" alt="Логотип 'Экожизнь' в виде листка клевера"></a>
+        <nav class="flex-1 lg:hidden">
+            <ul class="flex justify-center gap-x-10 text-green-100 text-center xl:text-base xl:gap-x-9">
+                <li class="cursor-pointer nav__item--current">Главная</li>
+                <li class="cursor-pointer">О фестивале</li>
+                <li class="cursor-pointer">Программа</li>
+                <li class="cursor-pointer">Контакты</li>
+                <li class="cursor-pointer">Партнёры</li>
+            </ul>
+        </nav>
+        <div class="flex gap-x-8 xl:gap-x-4">
+            <a href="#" class="cursor-pointer transition ease-in hover:scale-125 xl:w-[3rem]">
+                <img
+                    class=""
+                    src="./images/icons/vk_rounded.svg"
+                    alt="Логотип Вконтакте"></a>
+            <a href="#" class="cursor-pointer transition ease-in hover:scale-125 xl:w-[3rem]">
+                <img
+                    class=""
+                    src="./images/icons/tg_rounded.svg"
+                    alt="Логотип Телеграмм"></a>
+        </div>
+    </header>
+    <main class="flex flex-col justify-between items-baseline my-16 w-full h-[80%]">
+        <div>
+            <div>
+                <p class="font-nauryz text-green-100 text-5xl leading-16 uppercase
+                          3sm:text-2xl 3sm:leading-[2rem]
+                          md:text-3xl
+                          xl:text-4xl">
+                    Фестиваль</p>
+                <h1 class="font-nauryz text-green-500 text-7xl leading-18 uppercase
+                          2sm:text-[2.5rem]
+                          3sm:text-4xl 3sm:leading-[2.2rem]
+                          md:text-5xl
+                          xl:text-6xl">
+                    Экожизнь</h1>
             </div>
-        </header>
-        <main class="relative px-32 w-full h-[89%]">
-            <div class="w-1/2 pt-[8rem]">
-                <div>
-                    <p class="font-nauryz text-green-100 text-5xl leading-18 uppercase">Фестиваль</p>
-                    <h1 class="font-nauryz text-green-500 text-7xl leading-20 uppercase">Экожизнь</h1>
-                </div>
-                <div class="pt-8 flex gap-x-12">
-                    <span class="px-16 py-2.5 font-bold text-green-100 text-2xl uppercase bg-green-500 rounded-full">14 сентября</span>
-                    <span class="font-bold text-green-100 text-3xl uppercase">10:30 - 18:00</span>
-                </div>
-                <span class="inline-flex items-center mt-[20px] text-green-100 text-base
-                             before:content-[''] before:inline-block before:w-[50px] before:h-[50px] before:mr-[14px] before:bg-[url('images/icons/location.svg')] before:bg-cover before:bg-center before:bg-no-repeat"
-                    >
+            <div class="pt-8 flex gap-x-12 items-center">
+                <span class="px-16 py-2.5 font-bold text-green-100 text-2xl uppercase leading-10 bg-green-500 rounded-full md:text-base 3sm:text-sm 3sm:px-8 3sm:py-1 2sm:px-5">14 сентября</span>
+                <span class="font-bold text-green-100 text-3xl uppercase md:text-[1.75rem] 3sm:text-xl">10:30 - 18:00</span>
+            </div>
+            <span class="inline-flex items-center mt-[20px] text-green-100 text-base
+                         before:content-[''] before:inline-block before:w-[50px] before:h-[50px] before:mr-[14px] before:bg-[url('images/icons/location.svg')] before:bg-cover before:bg-center before:bg-no-repeat
+                         3sm:before:w-[40px] 3sm:before:h-[40px]"
+            >
                     наб. Северной двины, 17, САФУ
                 </span>
+        </div>
+        <div class="flex flex-col self-center gap-y-10 w-full">
+            <div class="flex items-center justify-center self-center gap-x-[10rem] w-full 2xl:gap-x-[6rem] md:flex-col md:gap-y-[1rem]">
+                <a href="#" class="button
+                                   2sm:w-full
+                                   md:w-[400px] md:px-[30px]
+                                   lg:w-[300px] lg:text-xl lg:px-[20px] lg:py-[8px]">Стать участником</a>
+                <a href="#" class="button
+                                   2sm:w-full
+                                   md:w-[400px] md:px-[30px]
+                                   lg:w-[300px] lg:text-xl lg:px-[20px] lg:py-[8px]">Стать партнером</a>
             </div>
-            // Выровнять по центру
-            <div class="absolute inline-flex justify-center w-screen bottom-[8rem] gap-x-[10rem]">
-                <a href="#" class="button">Стать участником</a>
-                <a href="#" class="button">Стать партнером</a>
-            </div>
-            <span class="block absolute bottom-[4rem] left-1/2 w-[44px] h-[24px] bg-[url('images/icons/arrow_down.svg')] bg-no-repeat bg-cover bg-center"></span>
-        </main>
-    </div>
+            <span class="block self-center mb-[2.5rem] w-[44px] h-[24px] bg-[url('images/icons/arrow_down.svg')] bg-no-repeat bg-cover bg-center"></span>
+        </div>
+    </main>
+</div>
 </body>
 </html>
