@@ -579,6 +579,10 @@ video {
   display: inline-flex;
 }
 
+.grid {
+  display: grid;
+}
+
 .h-\[24px\] {
   height: 24px;
 }
@@ -599,12 +603,24 @@ video {
   width: 100%;
 }
 
+.w-1\/2 {
+  width: 50%;
+}
+
+.w-2\/3 {
+  width: 66.666667%;
+}
+
 .flex-1 {
   flex: 1 1 0%;
 }
 
 .cursor-pointer {
   cursor: pointer;
+}
+
+.grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .flex-col {
@@ -625,6 +641,10 @@ video {
 
 .justify-between {
   justify-content: space-between;
+}
+
+.gap-16 {
+  gap: 4rem;
 }
 
 .gap-x-10 {
@@ -651,6 +671,22 @@ video {
   row-gap: 2.5rem;
 }
 
+.gap-y-0\.5 {
+  row-gap: 0.125rem;
+}
+
+.gap-y-4 {
+  row-gap: 1rem;
+}
+
+.gap-y-8 {
+  row-gap: 2rem;
+}
+
+.gap-y-16 {
+  row-gap: 4rem;
+}
+
 .self-center {
   align-self: center;
 }
@@ -662,6 +698,11 @@ video {
 .bg-green-500 {
   --tw-bg-opacity: 1;
   background-color: rgb(162 208 30 / var(--tw-bg-opacity));
+}
+
+.bg-green-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(130 168 22 / var(--tw-bg-opacity));
 }
 
 .bg-\[url\(\'images\/icons\/arrow_down\.svg\'\)\] {
@@ -699,12 +740,41 @@ video {
   padding-bottom: 0.625rem;
 }
 
+.py-\[8rem\] {
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+}
+
 .pt-10 {
   padding-top: 2.5rem;
 }
 
 .pt-8 {
   padding-top: 2rem;
+}
+
+.pt-\[10rem\] {
+  padding-top: 10rem;
+}
+
+.pt-\[8rem\] {
+  padding-top: 8rem;
+}
+
+.pt-\[120px\] {
+  padding-top: 120px;
+}
+
+.pl-\[\] {
+  padding-left: ;
+}
+
+.pl-\[10rem\] {
+  padding-left: 10rem;
+}
+
+.pt-\[3rem\] {
+  padding-top: 3rem;
 }
 
 .text-center {
@@ -735,6 +805,10 @@ video {
   font-size: 1.125rem;
 }
 
+.text-\[2rem\] {
+  font-size: 2rem;
+}
+
 .font-bold {
   font-weight: 700;
 }
@@ -751,6 +825,18 @@ video {
   line-height: 4rem;
 }
 
+.leading-\[1\.5rem\] {
+  line-height: 1.5rem;
+}
+
+.leading-\[2\.25rem\] {
+  line-height: 2.25rem;
+}
+
+.leading-\[2rem\] {
+  line-height: 2rem;
+}
+
 .text-green-100 {
   --tw-text-opacity: 1;
   color: rgb(247 255 225 / var(--tw-text-opacity));
@@ -759,6 +845,11 @@ video {
 .text-green-500 {
   --tw-text-opacity: 1;
   color: rgb(162 208 30 / var(--tw-text-opacity));
+}
+
+.text-green-1000 {
+  --tw-text-opacity: 1;
+  color: rgb(54 68 15 / var(--tw-text-opacity));
 }
 
 .transition {
@@ -825,11 +916,6 @@ video {
 }
 
 @media (max-width: 1366px) {
-  .\32xl\:gap-x-\[8rem\] {
-    -moz-column-gap: 8rem;
-         column-gap: 8rem;
-  }
-
   .\32xl\:gap-x-\[6rem\] {
     -moz-column-gap: 6rem;
          column-gap: 6rem;

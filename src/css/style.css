@@ -44,3 +44,32 @@ body {
     background-color: var(--green-500);
     border-radius: 9999px;
 }
+
+.title {
+    width: 800px;
+}
+
+.subtitle {
+    padding-bottom: 3.75rem;
+    font-family: 'NauryzRedKeds', sans-serif;
+    font-size: 3rem;
+    line-height: 3rem;
+    color: white;
+    text-transform: uppercase;
+}
+
+.regular-text {
+    font-size: 1.5rem;
+    color: var(--green-1000);
+}
+
+.about__reason-text::before {
+    content: '';
+    display: inline-block;
+    margin-right: 20px;
+    width: 60px;
+    height: 60px;
+    background: url("../images/logo.svg") no-repeat center;
+    -webkit-background-size: contain;
+    background-size: contain;
+}
