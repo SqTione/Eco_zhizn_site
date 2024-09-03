@@ -623,6 +623,10 @@ video {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
+.grid-cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
 .flex-col {
   flex-direction: column;
 }
@@ -645,6 +649,22 @@ video {
 
 .gap-16 {
   gap: 4rem;
+}
+
+.gap-2 {
+  gap: 0.5rem;
+}
+
+.gap-6 {
+  gap: 1.5rem;
+}
+
+.gap-8 {
+  gap: 2rem;
+}
+
+.gap-10 {
+  gap: 2.5rem;
 }
 
 .gap-x-10 {
@@ -671,6 +691,10 @@ video {
   row-gap: 2.5rem;
 }
 
+.gap-y-2 {
+  row-gap: 0.5rem;
+}
+
 .self-center {
   align-self: center;
 }
@@ -687,6 +711,11 @@ video {
 .bg-green-600 {
   --tw-bg-opacity: 1;
   background-color: rgb(130 168 22 / var(--tw-bg-opacity));
+}
+
+.bg-green-100 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(247 255 225 / var(--tw-bg-opacity));
 }
 
 .bg-\[url\(\'images\/icons\/arrow_down\.svg\'\)\] {
@@ -743,6 +772,10 @@ video {
 
 .pt-\[3rem\] {
   padding-top: 3rem;
+}
+
+.pt-\[5rem\] {
+  padding-top: 5rem;
 }
 
 .text-center {
@@ -871,21 +904,17 @@ video {
 }
 
 @media (max-width: 1366px) {
-  .\32xl\:w-full {
-    width: 100%;
-  }
-
   .\32xl\:w-3\/4 {
     width: 75%;
+  }
+
+  .\32xl\:w-full {
+    width: 100%;
   }
 
   .\32xl\:gap-x-\[6rem\] {
     -moz-column-gap: 6rem;
          column-gap: 6rem;
-  }
-
-  .\32xl\:pl-\[8rem\] {
-    padding-left: 8rem;
   }
 
   .\32xl\:pl-\[6rem\] {
@@ -929,35 +958,13 @@ video {
     font-size: 1.25rem;
   }
 
-  .xl\:text-\[1\.75rem\] {
-    font-size: 1.75rem;
-  }
-
-  .xl\:text-\[1\.5rem\] {
-    font-size: 1.5rem;
-  }
-
-  .xl\:leading-\[2rem\] {
-    line-height: 2rem;
-  }
-
   .xl\:leading-\[1\.5rem\] {
     line-height: 1.5rem;
-  }
-
-  .xl\:before\:h-\[40px\]::before {
-    content: var(--tw-content);
-    height: 40px;
   }
 
   .xl\:before\:min-h-\[40px\]::before {
     content: var(--tw-content);
     min-height: 40px;
-  }
-
-  .xl\:before\:w-\[40px\]::before {
-    content: var(--tw-content);
-    width: 40px;
   }
 
   .xl\:before\:min-w-\[40px\]::before {
@@ -1021,20 +1028,12 @@ video {
     padding-right: 30px;
   }
 
-  .md\:pl-\[4rem\] {
-    padding-left: 4rem;
+  .md\:pl-\[2rem\] {
+    padding-left: 2rem;
   }
 
   .md\:pt-\[1\.5rem\] {
     padding-top: 1.5rem;
-  }
-
-  .md\:pt-\[2rem\] {
-    padding-top: 2rem;
-  }
-
-  .md\:pl-\[2rem\] {
-    padding-left: 2rem;
   }
 
   .md\:text-3xl {

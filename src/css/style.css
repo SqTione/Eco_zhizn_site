@@ -19,6 +19,7 @@ body {
     font-size: 1.5rem;
     font-weight: 400;
     font-style: normal;
+    background: #ECECEC;
 }
 
 .button {
@@ -72,4 +73,33 @@ body {
     background: url("../images/logo.svg") no-repeat center;
     -webkit-background-size: cover;
     background-size: cover;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px 40px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.35);
+}
+
+.card__time {
+    font-family: "NauryzRedKeds", sans-serif;
+    font-size: 48px;
+    font-weight: bold;
+    color: var(--green-600);
+}
+
+.card__title {
+    font-size: 28px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--green-1000);
+}
+
+.card__image {
+    width: 70px;
+    align-self: end;
 }
