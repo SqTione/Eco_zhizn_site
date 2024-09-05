@@ -78,17 +78,19 @@
 </div>
 <section class="about w-full">
     <div class="info px-[7.5rem] py-[8rem] xl:px-[2.5rem] md:!px-[1.5rem]">
-        <img src="images/titles/about.svg" alt="О фестивале" class="title">
+        <img src="images/titles/about.svg" alt="О фестивале" class="title 3sm:min-w-[500px]">
         <p class="w-2/3 pl-[10rem] regular-text
+                  3sm:pl-[2rem] 3sm:pt-[1rem]
                   2xl:w-full">
             Наш фестиваль объединяет единомышлеников: людей с бережным отношением к себе,
             к своему здоровью, к природе. Присоединяйтесь, и вы окажетесь среди тех,
             кто разделяет вместе с вами эти взгляды.</p>
     </div>
     <div class="about__reasons w-full px-[7.5rem] py-[8rem] bg-green-600
+                3sm:py-[4rem]
                 md:!px-[1.5rem]
                 xl:px-[2.5rem]">
-        <h3 class="subtitle w-1/2 2xl:w-3/4">экофест для тебя, если ты...</h3>
+        <h3 class="subtitle w-1/2 2xl:w-3/4 3sm:text-3xl 3sm:pb-1">экофест для тебя, если ты...</h3>
         <div class="about__reasons-list w-full grid grid-cols-2 gap-16 pt-[3rem] pl-[10rem]
                     md:grid-cols-1 md:gap-8 md:pt-[1.5rem] md:pl-[2rem]
                     2xl:pl-[6rem]">
@@ -119,53 +121,55 @@
         </div>
     </div>
 </section>
-<section class="program px-[7.5rem] py-[8rem] xl:px-[2.5rem] md:!px-[1.5rem]">
+<section class="program px-[7.5rem] py-[8rem] xl:px-[2.5rem] md:!px-[1.5rem] 3sm:py-[4rem]">
     <img src="images/titles/program.svg" alt="Программа фестиваля" class="title">
-    <div class="program__cards w-full grid grid-cols-3 justify-between gap-10 pt-[5rem]">
+    <div class="program__cards w-full grid grid-cols-3 justify-between gap-10 pt-[5rem]
+                4sm:gap-4
+                lg:grid-cols-2">
         <div class="card">
-            <p class="card__time">10:30</p>
+            <p class="card__time">11:00</p>
+            <span class="card__title">Торжественное открытие</span>
+            <img class="card__image" src="images/icons/party.svg" alt="">
+        </div>
+        <div class="card">
+            <p class="card__time">11:30-14:30</p>
             <span class="card__title">Открытие стендов</span>
+            <img class="card__image" src="images/icons/cloud.svg" alt="">
+        </div>
+        <div class="card">
+            <p class="card__time">10:30-17:30</p>
+            <span class="card__title">Стенды</span>
             <img class="card__image" src="images/icons/door.svg" alt="">
         </div>
         <div class="card">
-            <p class="card__time">10:30</p>
-            <span class="card__title">Открытие стендов</span>
+            <p class="card__time">10:30-17:30</p>
+            <span class="card__title">Эко-сбор</span>
+            <img class="card__image" src="images/icons/eco.svg" alt="">
+        </div>
+        <div class="card">
+            <p class="card__time">11:30-17:30</p>
+            <span class="card__title">Мастер-классы</span>
             <img class="card__image" src="images/icons/door.svg" alt="">
         </div>
         <div class="card">
-            <p class="card__time">10:30</p>
-            <span class="card__title">Открытие стендов</span>
-            <img class="card__image" src="images/icons/door.svg" alt="">
+            <p class="card__time">12:30-17:00</p>
+            <span class="card__title">Оздоровительная физкультура</span>
+            <img class="card__image" src="images/icons/sport.svg" alt="">
         </div>
         <div class="card">
-            <p class="card__time">10:30</p>
-            <span class="card__title">Открытие стендов</span>
-            <img class="card__image" src="images/icons/door.svg" alt="">
+            <p class="card__time">11:30-17:30</p>
+            <span class="card__title">Семейный клуб</span>
+            <img class="card__image" src="images/icons/happy-house.svg" alt="">
         </div>
         <div class="card">
-            <p class="card__time">10:30</p>
-            <span class="card__title">Открытие стендов</span>
-            <img class="card__image" src="images/icons/door.svg" alt="">
+            <p class="card__time">14:30-16:30</p>
+            <span class="card__title">Проектная работа</span>
+            <img class="card__image" src="images/icons/hat.svg" alt="">
         </div>
-        <div class="card">
-            <p class="card__time">10:30</p>
-            <span class="card__title">Открытие стендов</span>
-            <img class="card__image" src="images/icons/door.svg" alt="">
-        </div>
-        <div class="card">
-            <p class="card__time">10:30</p>
-            <span class="card__title">Открытие стендов</span>
-            <img class="card__image" src="images/icons/door.svg" alt="">
-        </div>
-        <div class="card">
-            <p class="card__time">10:30</p>
-            <span class="card__title">Открытие стендов</span>
-            <img class="card__image" src="images/icons/door.svg" alt="">
-        </div>
-        <div class="card">
-            <p class="card__time">10:30</p>
-            <span class="card__title">Открытие стендов</span>
-            <img class="card__image" src="images/icons/door.svg" alt="">
+        <div class="card lg:col-start-1 lg:col-end-3">
+            <p class="card__time">17:30-18:00</p>
+            <span class="card__title lg:w-full">Творческая программа</span>
+            <img class="card__image" src="images/icons/party.svg" alt="">
         </div>
     </div>
 </section>

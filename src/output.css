@@ -647,24 +647,12 @@ video {
   justify-content: space-between;
 }
 
-.gap-16 {
-  gap: 4rem;
-}
-
-.gap-2 {
-  gap: 0.5rem;
-}
-
-.gap-6 {
-  gap: 1.5rem;
-}
-
-.gap-8 {
-  gap: 2rem;
-}
-
 .gap-10 {
   gap: 2.5rem;
+}
+
+.gap-16 {
+  gap: 4rem;
 }
 
 .gap-x-10 {
@@ -691,10 +679,6 @@ video {
   row-gap: 2.5rem;
 }
 
-.gap-y-2 {
-  row-gap: 0.5rem;
-}
-
 .self-center {
   align-self: center;
 }
@@ -711,11 +695,6 @@ video {
 .bg-green-600 {
   --tw-bg-opacity: 1;
   background-color: rgb(130 168 22 / var(--tw-bg-opacity));
-}
-
-.bg-green-100 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(247 255 225 / var(--tw-bg-opacity));
 }
 
 .bg-\[url\(\'images\/icons\/arrow_down\.svg\'\)\] {
@@ -974,12 +953,28 @@ video {
 }
 
 @media (max-width: 1024px) {
+  .lg\:col-start-1 {
+    grid-column-start: 1;
+  }
+
+  .lg\:col-end-3 {
+    grid-column-end: 3;
+  }
+
   .lg\:hidden {
     display: none;
   }
 
   .lg\:w-\[300px\] {
     width: 300px;
+  }
+
+  .lg\:w-full {
+    width: 100%;
+  }
+
+  .lg\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .lg\:px-\[20px\] {
@@ -1053,7 +1048,33 @@ video {
   }
 }
 
+@media (max-width: 700px) {
+  .\34sm\:grid-cols-1 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+
+  .\34sm\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .\34sm\:gap-6 {
+    gap: 1.5rem;
+  }
+
+  .\34sm\:gap-4 {
+    gap: 1rem;
+  }
+}
+
 @media (max-width: 560px) {
+  .\33sm\:min-w-\[500px\] {
+    min-width: 500px;
+  }
+
+  .\33sm\:max-w-\[500px\] {
+    max-width: 500px;
+  }
+
   .\33sm\:px-8 {
     padding-left: 2rem;
     padding-right: 2rem;
@@ -1061,6 +1082,42 @@ video {
 
   .\33sm\:py-1 {
     padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+  }
+
+  .\33sm\:py-\[2rem\] {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .\33sm\:py-\[1rem\] {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .\33sm\:py-\[4rem\] {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  .\33sm\:\!py-\[4rem\] {
+    padding-top: 4rem !important;
+    padding-bottom: 4rem !important;
+  }
+
+  .\33sm\:pl-0 {
+    padding-left: 0px;
+  }
+
+  .\33sm\:pl-\[2rem\] {
+    padding-left: 2rem;
+  }
+
+  .\33sm\:pt-\[1rem\] {
+    padding-top: 1rem;
+  }
+
+  .\33sm\:pb-1 {
     padding-bottom: 0.25rem;
   }
 
@@ -1078,6 +1135,10 @@ video {
 
   .\33sm\:text-xl {
     font-size: 1.25rem;
+  }
+
+  .\33sm\:text-3xl {
+    font-size: 2.25rem;
   }
 
   .\33sm\:leading-\[2\.2rem\] {

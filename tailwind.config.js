@@ -35,6 +35,7 @@ module.exports = {
             'xl': {'max': '1280px'},
             'lg': {'max': '1024px'},
             'md': {'max': '768px'},
+            '4sm': {'max' : '700px'},
             '3sm': {'max': '560px'},
             '2sm': {'max': '450px'},
             'sm': {'max': '390px'},
