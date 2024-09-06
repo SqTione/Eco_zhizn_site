@@ -687,6 +687,10 @@ video {
   list-style-type: decimal;
 }
 
+.auto-cols-auto {
+  grid-auto-columns: auto;
+}
+
 .grid-cols-2 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
@@ -697,6 +701,10 @@ video {
 
 .flex-col {
   flex-direction: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
 }
 
 .items-center {
