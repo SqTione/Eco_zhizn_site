@@ -105,6 +105,10 @@ body {
     align-self: end;
 }
 
+.swiper-navigation {
+    align-items: center;
+}
+
 @media screen and (max-width: 768px) {
     .card__time {
         font-size: 36px;

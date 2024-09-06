@@ -173,5 +173,116 @@
         </div>
     </div>
 </section>
+<section class="swiper-section w-full h-screen bg-green-600 overflow-hidden">
+    <div class="swiper relative flex flex-col justify-between w-full h-full">
+        <div class="swiper-wrapper flex w-full h-full">
+            <div class="swiper-slide min-w-[100%] h-full relative px-[7.5rem] py-[8rem] xl:px-[2.5rem] md:!px-[1.5rem] 3sm:py-[4rem]">
+                <div class="swiper__content flex flex-col gap-y-4 w-1/2">
+                    <p class="swiper__title pb-6 font-nauryz text-4xl text-green-100 uppercase">Конференция</p>
+                    <p class="swiper__text text-2xl text-green-100">Вас ждет насыщенная программа выступлений от ведущих
+                        экспертов в области экологии и здоровья.
+                        Спикеры поделятся актуальными знаниями, опытом и практическими решениями,
+                        направленными на сохранение окружающей среды. Откройте для себя новые перспективы
+                        и получите ценные инсайты на нашей конференции.</p>
+                    <p class="swiper__subtitle font-bold text-2xl text-green-100">Программа:</p>
+                    <ol class="text-2xl text-green-100 list-decimal list-inside">
+                        <li>«Тема» - Спикер</li>
+                        <li>«Тема» - Спикер</li>
+                        <li>«Тема» - Спикер</li>
+                    </ol>
+                </div>
+                <img class="absolute right-0 top-0 w-2/5" src="images/swiper/img_1.png" alt="">
+            </div>
+            <div class="swiper-slide min-w-[100%] h-full relative px-[7.5rem] py-[8rem] xl:px-[2.5rem] md:!px-[1.5rem] 3sm:py-[4rem]">
+                <div class="swiper__content flex flex-col gap-y-4 w-1/2">
+                    <p class="swiper__title pb-6 font-nauryz text-4xl text-green-100 uppercase">Мастер-классы</p>
+                    <p class="swiper__text text-2xl text-green-100">
+                        Присоединяйтесь к нашим мастер-классам и получите уникальный опыт в области экологии. Практические занятия от профессионалов помогут вам освоить новые навыки, узнать о зеленых технологиях и научиться применять экологичные подходы в повседневной жизни. Превратите знания в действия!</p>
+                    <p class="swiper__subtitle font-bold text-2xl text-green-100">Программа:</p>
+                    <ol class="text-2xl text-green-100 list-decimal list-inside">
+                        <li>«Тема» - Спикер</li>
+                        <li>«Тема» - Спикер</li>
+                        <li>«Тема» - Спикер</li>
+                    </ol>
+                </div>
+                <img class="absolute right-0 top-0 w-2/5" src="images/swiper/img_1.png" alt="">
+            </div>
+            <div class="swiper-slide min-w-[100%] h-full relative px-[7.5rem] py-[8rem] xl:px-[2.5rem] md:!px-[1.5rem] 3sm:py-[4rem]">
+                <div class="swiper__content flex flex-col gap-y-4 w-1/2">
+                    <p class="swiper__title pb-6 font-nauryz text-4xl text-green-100 uppercase">Проектные работы</p>
+                    <p class="swiper__text text-2xl text-green-100">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam mollis nisi sed felis vulputate, non fermentum nibh lacinia. Morbi interdum, velit ultricies elementum mattis, neque purus placerat ipsum, sit amet bibendum turpis mauris quis tellus. Vivamus consectetur aliquam felis in dignissim.</p>
+                    <p class="swiper__subtitle font-bold text-2xl text-green-100">Программа:</p>
+                    <ol class="text-2xl text-green-100 list-decimal list-inside">
+                        <li>«Тема» - Спикер</li>
+                        <li>«Тема» - Спикер</li>
+                        <li>«Тема» - Спикер</li>
+                    </ol>
+                </div>
+                <img class="absolute right-0 top-0 w-2/5" src="images/swiper/img_1.png" alt="">
+            </div>
+        </div>
+        <div class="swiper-navigation absolute flex justify-between bottom-0 gap-x-28 w-full px-[7.5rem] py-[8rem] xl:px-[2.5rem] md:!px-[1.5rem] 3sm:py-[4rem]">
+            <img class="swiper-button-prev" src="images/icons/prev.svg">
+            <div class="swiper-progress relative bottom-0 left-0 w-[70%] h-3 bg-green-100 rounded-full">
+                <div class="swiper-progress-bar h-full bg-green-400 rounded-full transition-all"></div>
+                <div class="swiper-progress-marker absolute top-[-13px] h-10 w-4 bg-green-100 rounded-full transition-all"></div>
+            </div>
+            <img class="swiper-button-next" src="images/icons/next.svg">
+        </div>
+    </div>
+
+    <script type="module">
+        import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs'
+
+        const swiper = new Swiper('.swiper', {
+            direction: 'horizontal',
+            loop: true,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            on: {
+                slideChangeTransitionStart: () => resetProgress(),
+                slideChangeTransitionEnd: () => startProgress(),
+            },
+        });
+
+        const progressBar = document.querySelector('.swiper-progress-bar');
+        const progressMarker = document.querySelector('.swiper-progress-marker');
+        let progressInterval;
+        const slideDuration = swiper.params.autoplay.delay;
+
+        function startProgress() {
+            let width = 0;
+            const markerWidth = progressMarker.offsetWidth / progressBar.offsetWidth * 100; // Процентная ширина маркера
+            progressBar.style.width = '0%';
+            progressMarker.style.left = '0%';
+
+            progressInterval = setInterval(() => {
+                width += 100 / (slideDuration / 100);
+                if (width >= 100) {
+                    clearInterval(progressInterval);
+                    width = 100 - markerWidth; // Останавливаем маркер перед правым краем
+                }
+                progressBar.style.width = `${width}%`;
+                progressMarker.style.left = `${width}%`;
+            }, 100);
+        }
+
+        function resetProgress() {
+            clearInterval(progressInterval);
+            progressBar.style.width = '0%';
+            progressMarker.style.left = '0%';
+        }
+
+        // Запуск прогресса для первого слайда
+        startProgress();
+    </script>
+</section>
 </body>
 </html>
