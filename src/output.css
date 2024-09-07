@@ -1126,6 +1126,10 @@ video {
     width: 100%;
   }
 
+  .\32xl\:w-2\/3 {
+    width: 66.666667%;
+  }
+
   .\32xl\:gap-x-\[6rem\] {
     -moz-column-gap: 6rem;
          column-gap: 6rem;
@@ -1213,8 +1217,28 @@ video {
     width: 100%;
   }
 
+  .lg\:\!w-full {
+    width: 100% !important;
+  }
+
   .lg\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .lg\:flex-col {
+    flex-direction: column;
+  }
+
+  .lg\:gap-y-4 {
+    row-gap: 1rem;
+  }
+
+  .lg\:gap-y-6 {
+    row-gap: 1.5rem;
+  }
+
+  .lg\:\!text-balance {
+    text-wrap: balance !important;
   }
 
   .lg\:px-\[20px\] {
@@ -1229,6 +1253,10 @@ video {
 
   .lg\:text-xl {
     font-size: 1.25rem;
+  }
+
+  .lg\:\!text-base {
+    font-size: 1.125rem !important;
   }
 }
 
@@ -1476,5 +1504,39 @@ video {
 
   .\32sm\:text-base {
     font-size: 1.125rem;
+  }
+
+  .\32sm\:text-\[1\.25rem\] {
+    font-size: 1.25rem;
+  }
+
+  .\32sm\:text-\[1\.5rem\] {
+    font-size: 1.5rem;
+  }
+
+  .\32sm\:\!text-base {
+    font-size: 1.125rem !important;
+  }
+
+  .\32sm\:text-xl {
+    font-size: 1.25rem;
+  }
+
+  .\32sm\:leading-4 {
+    line-height: 1rem;
+  }
+
+  .\32sm\:leading-8 {
+    line-height: 2rem;
+  }
+
+  .\32sm\:before\:h-\[30px\]::before {
+    content: var(--tw-content);
+    height: 30px;
+  }
+
+  .\32sm\:before\:w-\[30px\]::before {
+    content: var(--tw-content);
+    width: 30px;
   }
 }
