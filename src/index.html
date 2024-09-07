@@ -11,7 +11,8 @@
     <script src="js/scripts.js" defer></script>
 </head>
 <body>
-<div class="px-[7.5rem] w-full h-screen bg-[url('images/main_bg.png')] bg-cover bg-no-repeat xl:px-[2.5rem] md:!px-[1.5rem]">
+<div id="overlay" class="w-full h-full fixed bg-black z-8 pointer-events-none"></div>
+<div id="main-screen" class="px-[7.5rem] w-full h-screen bg-[url('images/main_bg.png')] bg-cover bg-no-repeat xl:px-[2.5rem] md:!px-[1.5rem]">
     <header class="w-full pt-10 flex justify-between items-center">
         <a class="xl:w-[3rem]" href="#"><img src="./images/logo.svg" alt="Логотип 'Экожизнь' в виде листка клевера"></a>
         <nav class="flex-1 lg:hidden">
@@ -101,16 +102,34 @@
                                    2sm:w-full
                                    md:w-[400px] md:px-[30px]
                                    lg:w-[300px] lg:text-xl lg:px-[20px] lg:py-[8px]">Стать участником</a>
-                <a href="#" class="button
+                <a href="#" id="become-partner" class="button
                                    2sm:w-full
                                    md:w-[400px] md:px-[30px]
                                    lg:w-[300px] lg:text-xl lg:px-[20px] lg:py-[8px]">Стать партнером</a>
             </div>
-            <span class="block self-center mb-[2.5rem] w-[44px] h-[24px] bg-[url('images/icons/arrow_down.svg')] bg-no-repeat bg-cover bg-center"></span>
+            <span id="scroll-button" class="block self-center mb-[2.5rem] w-[44px] h-[24px] bg-[url('images/icons/arrow_down.svg')] bg-no-repeat bg-cover bg-center"></span>
         </div>
     </main>
 </div>
-<section class="about w-full">
+<div class="partner-popup w-full h-full fixed top-0 left-0 justify-center items-center">
+    <div class="relative w-1/2 px-8 py-8 bg-white-100 rounded-2xl">
+        <div class="w-full flex flex-col">
+            <div class="flex justify-between">
+                <h2 class="font-nauryz text-3xl text-bold text-green-600 uppercase">Стать партнером</h2>
+                <div id="close-partner-popup" class="w-[50px] h-[40px] mt-3 flex flex-col items-center gap-y-4 cursor-pointer">
+                    <span class="cross--top w-full h-[5px] bg-green-600 rounded-full"></span>
+                    <span class="cross--bottom w-full h-[5px] bg-green-600 rounded-full"></span>
+                </div>
+            </div>
+            <div class="flex justify-between pt-12">
+                <button class="button py-2">Стать волонтером</button>
+                <button class="button py-2">Поддержать фестиваль</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+<section id="about" class="about w-full">
     <div class="info px-[7.5rem] py-[8rem] xl:px-[2.5rem] md:!px-[1.5rem]">
         <img src="images/titles/about.svg" alt="О фестивале" class="title">
         <p class="w-2/3 pl-[10rem] regular-text
@@ -207,7 +226,7 @@
         </div>
     </div>
 </section>
-<section class="swiper-section w-full h-screen bg-green-600 overflow-hidden
+<section id="test" class="swiper-section w-full h-screen bg-green-600 overflow-hidden
                 2sm:h-max">
     <div class="swiper relative flex flex-col justify-between w-full h-full">
         <div class="swiper-wrapper flex w-full h-full">
