@@ -574,12 +574,28 @@ video {
   right: 0px;
 }
 
+.top-0 {
+  top: 0px;
+}
+
 .top-\[-13px\] {
   top: -13px;
 }
 
 .top-\[10\%\] {
   top: 10%;
+}
+
+.top-1\/2 {
+  top: 50%;
+}
+
+.top-1\/3 {
+  top: 33.333333%;
+}
+
+.z-10 {
+  z-index: 10;
 }
 
 .my-16 {
@@ -611,6 +627,14 @@ video {
   display: grid;
 }
 
+.hidden {
+  display: none;
+}
+
+.h-1 {
+  height: 0.25rem;
+}
+
 .h-10 {
   height: 2.5rem;
 }
@@ -623,6 +647,10 @@ video {
   height: 24px;
 }
 
+.h-\[40px\] {
+  height: 40px;
+}
+
 .h-\[80\%\] {
   height: 80%;
 }
@@ -633,6 +661,10 @@ video {
 
 .h-screen {
   height: 100vh;
+}
+
+.h-\[30px\] {
+  height: 30px;
 }
 
 .w-1\/2 {
@@ -655,6 +687,10 @@ video {
   width: 1rem;
 }
 
+.w-\[40px\] {
+  width: 40px;
+}
+
 .w-\[44px\] {
   width: 44px;
 }
@@ -667,12 +703,20 @@ video {
   width: 100%;
 }
 
+.w-\[30px\] {
+  width: 30px;
+}
+
 .min-w-\[100\%\] {
   min-width: 100%;
 }
 
 .flex-1 {
   flex: 1 1 0%;
+}
+
+.origin-center {
+  transform-origin: center;
 }
 
 .cursor-pointer {
@@ -705,6 +749,10 @@ video {
 
 .items-start {
   align-items: flex-start;
+}
+
+.items-end {
+  align-items: flex-end;
 }
 
 .items-center {
@@ -803,16 +851,25 @@ video {
   row-gap: 2rem;
 }
 
+.gap-y-16 {
+  row-gap: 4rem;
+}
+
+.gap-x-3 {
+  -moz-column-gap: 0.75rem;
+       column-gap: 0.75rem;
+}
+
+.self-end {
+  align-self: flex-end;
+}
+
 .self-center {
   align-self: center;
 }
 
 .overflow-hidden {
   overflow: hidden;
-}
-
-.overflow-y-hidden {
-  overflow-y: hidden;
 }
 
 .rounded-full {
@@ -917,6 +974,18 @@ video {
 
 .pt-\[5rem\] {
   padding-top: 5rem;
+}
+
+.pt-4 {
+  padding-top: 1rem;
+}
+
+.pt-6 {
+  padding-top: 1.5rem;
+}
+
+.pb-8 {
+  padding-bottom: 2rem;
 }
 
 .text-center {
@@ -1230,6 +1299,14 @@ video {
     grid-column-end: 3;
   }
 
+  .lg\:block {
+    display: block;
+  }
+
+  .lg\:flex {
+    display: flex;
+  }
+
   .lg\:hidden {
     display: none;
   }
@@ -1242,12 +1319,24 @@ video {
     width: 100%;
   }
 
+  .lg\:w-1\/2 {
+    width: 50%;
+  }
+
+  .lg\:w-1\/3 {
+    width: 33.333333%;
+  }
+
   .lg\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .lg\:flex-col {
     flex-direction: column;
+  }
+
+  .lg\:items-center {
+    align-items: center;
   }
 
   .lg\:justify-between {
@@ -1260,6 +1349,10 @@ video {
 
   .lg\:gap-y-6 {
     row-gap: 1.5rem;
+  }
+
+  .lg\:gap-y-2 {
+    row-gap: 0.5rem;
   }
 
   .lg\:px-\[20px\] {
@@ -1393,10 +1486,6 @@ video {
 }
 
 @media (max-width: 560px) {
-  .\33sm\:min-w-\[500px\] {
-    min-width: 500px;
-  }
-
   .\33sm\:px-8 {
     padding-left: 2rem;
     padding-right: 2rem;

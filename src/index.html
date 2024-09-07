@@ -23,7 +23,40 @@
                 <li class="cursor-pointer">Партнёры</li>
             </ul>
         </nav>
-        <div class="flex gap-x-8 xl:gap-x-4">
+        <div class="sidebar__button relative hidden w-[40px] h-[40px] pointer z-10
+                    lg:flex lg:flex-col lg:items-center lg:gap-y-2">
+            <span class="sidebar__button-line w-full h-1 bg-green-100 rounded-full transition-all ease-in origin-center"></span>
+            <span class="sidebar__button-line w-full h-1 bg-green-100 rounded-full transition-all ease-in"></span>
+            <span class="sidebar__button-line w-full h-1 bg-green-100 rounded-full transition-all ease-in origin-center"></span>
+        </div>
+        <div id="sidebar">
+            <div class="sidebar__content w-full h-full">
+                <h2 class="text-2xl uppercase">Меню</h2>
+                <div class="w-full h-full flex flex-col justify-between pt-6">
+                    <nav>
+                        <ul class="text-base flex flex-col gap-y-2">
+                            <li class="cursor-pointer">Главная</li>
+                            <li class="cursor-pointer">О фестивале</li>
+                            <li class="cursor-pointer">Программа</li>
+                            <li class="cursor-pointer">Контакты</li>
+                            <li class="cursor-pointer">Партнёры</li>
+                        </ul>
+                    </nav>
+                    <div class="flex justify-end gap-x-4 pb-8 w-full">
+                        <a href="https://vk.com/zhizn_eco" class="cursor-pointer transition ease-in hover:scale-125 xl:w-[3rem]">
+                            <img class=""
+                                 src="./images/icons/vk_dark.svg"
+                                 alt="Логотип Вконтакте"></a>
+                        <a href="https://t.me/eco_zhizn" class="cursor-pointer transition ease-in hover:scale-125 xl:w-[3rem]">
+                            <img class=""
+                                 src="./images/icons/tg_dark.svg"
+                                 alt="Логотип Телеграмм"></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="flex gap-x-8 xl:gap-x-4 lg:hidden">
             <a href="#" class="cursor-pointer transition ease-in hover:scale-125 xl:w-[3rem]">
                 <img
                     class=""
