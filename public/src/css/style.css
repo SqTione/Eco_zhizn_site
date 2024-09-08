@@ -48,10 +48,6 @@ body {
     border-radius: 9999px;
 }
 
-.title {
-    width: 800px;
-}
-
 .subtitle {
     padding-bottom: 3.75rem;
     font-family: 'Lato', sans-serif;
@@ -252,6 +248,12 @@ body {
     .program__cards {
         display: flex !important;
         flex-direction: column !important;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .subtitle {
+        font-size: 32px;
     }
 }
 
