@@ -5,6 +5,47 @@
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
+    ],
+    "headers": [
+      {
+        "source": "**/*.woff",
+        "headers": [
+          {
+            "key": "Content-Type",
+            "value": "application/font-woff"
+          },
+          {
+            "key": "Cache-Control",
+            "value": "max-agee"
+          }
+        ]
+      },
+      {
+        "source": "**/*.woff2",
+        "headers": [
+          {
+            "key": "Content-Type",
+            "value": "application/font-woff2"
+          },
+          {
+            "key": "Cache-Control",
+            "value": "max-age"
+          }
+        ]
+      },
+      {
+        "source": "**/*.ttf",
+        "headers": [
+          {
+            "key": "Content-Type",
+            "value": "application/x-font-ttf"
+          },
+          {
+            "key": "Cache-Control",
+            "value": "max-age"
+          }
+        ]
+      }
     ]
   }
 }
