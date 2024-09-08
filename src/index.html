@@ -12,19 +12,19 @@
 </head>
 <body>
 <div id="overlay" class="w-full h-full fixed bg-black z-8 pointer-events-none"></div>
-<div id="main-screen" class="px-[7.5rem] w-full h-screen bg-[url('images/main_bg.png')] bg-cover bg-no-repeat xl:px-[2.5rem] md:!px-[1.5rem]">
+<div id="main-screen" class="is-in-floating-nav px-[7.5rem] w-full h-screen bg-[url('images/main_bg.png')] bg-cover bg-no-repeat xl:px-[2.5rem] md:!px-[1.5rem]">
     <header class="w-full pt-10 flex justify-between items-center">
         <a class="xl:w-[3rem]" href="#"><img src="./images/logo.svg" alt="Логотип 'Экожизнь' в виде листка клевера"></a>
         <nav class="flex-1 lg:hidden">
             <ul class="flex justify-center gap-x-10 text-green-100 text-center xl:text-base xl:gap-x-9">
-                <li class="cursor-pointer nav__item--current">Главная</li>
-                <li class="cursor-pointer">О фестивале</li>
-                <li class="cursor-pointer">Программа</li>
-                <li class="cursor-pointer">Контакты</li>
-                <li class="cursor-pointer">Партнёры</li>
+                <li class="header-nav__item nav__item--current cursor-pointer">Главная</li>
+                <li class="header-nav__item cursor-pointer ">О фестивале</li>
+                <li class="header-nav__item cursor-pointer ">Программа</li>
+                <li class="header-nav__item cursor-pointer ">Контакты</li>
+                <li class="header-nav__item cursor-pointer ">Партнёры</li>
             </ul>
         </nav>
-        <div class="sidebar__button relative hidden w-[40px] h-[40px] pointer z-10
+        <div class="sidebar__button hidden w-[40px] h-[40px] pointer z-20
                     lg:flex lg:flex-col lg:items-center lg:gap-y-2">
             <span class="sidebar__button-line w-full h-1 bg-green-100 rounded-full transition-all ease-in origin-center"></span>
             <span class="sidebar__button-line w-full h-1 bg-green-100 rounded-full transition-all ease-in"></span>
@@ -36,11 +36,11 @@
                 <div class="w-full h-full flex flex-col justify-between pt-6">
                     <nav>
                         <ul class="text-base flex flex-col gap-y-2">
-                            <li class="cursor-pointer">Главная</li>
-                            <li class="cursor-pointer">О фестивале</li>
-                            <li class="cursor-pointer">Программа</li>
-                            <li class="cursor-pointer">Контакты</li>
-                            <li class="cursor-pointer">Партнёры</li>
+                            <li class="sidebar-nav-item cursor-pointer"><a href="#main-screen">Главная</a></li>
+                            <li class="sidebar-nav-item cursor-pointer"><a href="#about">О фестивале</a></li>
+                            <li class="sidebar-nav-item cursor-pointer"><a href="#program">Программа</a></li>
+                            <li class="sidebar-nav-item cursor-pointer"><a href="#contacts">Контакты</a></li>
+                            <li class="sidebar-nav-item cursor-pointer"><a href="#partners-section">Партнёры</a></li>
                         </ul>
                     </nav>
                     <div class="flex justify-end gap-x-4 pb-8 w-full">
@@ -126,10 +126,20 @@
                 <button class="button py-2">Поддержать фестиваль</button>
             </div>
         </div>
-
     </div>
 </div>
-<section id="about" class="about w-full">
+<div class="floating-nav-menu floating-nav-menu--visible">
+    <nav class="floating-nav-menu__content w-max px-8 py-2 bg-white-100 rounded-full">
+        <ul class="text-base relative flex justify-between gap-x-2">
+            <li class="floating-nav__item">Главная</li>
+            <li class="floating-nav__item">О фестивале</li>
+            <li class="floating-nav__item">Программа</li>
+            <li class="floating-nav__item">Контакты</li>
+            <li class="floating-nav__item">Партнёры</li>
+        </ul>
+    </nav>
+</div>
+<section id="about" class="about is-in-floating-nav w-full">
     <div class="info px-[7.5rem] py-[8rem] xl:px-[2.5rem] md:!px-[1.5rem]">
         <img src="images/titles/about.svg" alt="О фестивале" class="title">
         <p class="w-2/3 pl-[10rem] regular-text
@@ -174,7 +184,7 @@
         </div>
     </div>
 </section>
-<section class="program px-[7.5rem] py-[8rem] xl:px-[2.5rem] md:!px-[1.5rem] 3sm:py-[4rem]">
+<section id="program" class="program is-in-floating-nav px-[7.5rem] py-[8rem] xl:px-[2.5rem] md:!px-[1.5rem] 3sm:py-[4rem]">
     <img src="images/titles/program.svg" alt="Программа фестиваля" class="title">
     <div class="program__cards w-full grid grid-cols-3 justify-between gap-10 pt-[5rem]
                 4sm:gap-4
@@ -428,7 +438,7 @@
         startProgress();
     </script>
 </section>
-<section class="contacts px-[7.5rem] py-[8rem] xl:px-[2.5rem] md:!px-[1.5rem] 3sm:py-[4rem]">
+<section id="contacts" class="contacts is-in-floating-nav px-[7.5rem] py-[8rem] xl:px-[2.5rem] md:!px-[1.5rem] 3sm:py-[4rem]">
     <img src="images/titles/contacts.svg" alt="Программа фестиваля" class="title 2sm:w-full">
     <div class="contacts__content flex justify-between gap-x-4 pl-[10rem] regular-text 3sm:pl-[2rem] 3sm:pt-[1rem] lg:flex-col lg:gap-y-6 2xl:w-full">
         <div class="flex flex-3 flex-col gap-y-10
@@ -460,7 +470,7 @@
         </div>
     </div>
 </section>
-<section class="partners bg-green-600 px-[7.5rem] py-[8rem] xl:px-[2.5rem] md:!px-[1.5rem] 3sm:py-[4rem]">
+<section id="partners-section" class="partners is-in-floating-nav bg-green-600 px-[7.5rem] py-[8rem] xl:px-[2.5rem] md:!px-[1.5rem] 3sm:py-[4rem]">
     <h3 class="subtitle w-1/2
                 2sm:text-[1.75rem] 2sm:leading-8
                 3sm:text-3xl 3sm:pb-4

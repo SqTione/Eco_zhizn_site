@@ -74,6 +74,15 @@ body {
     transform: rotate(-45deg) translate(10px, -4px);
 }
 
+.sidebar__button--active {
+    position: fixed;
+    right: 5%;
+}
+
+.sidebar__button-line:nth-child(2) {
+    transition: width 0.25s ease-in-out;
+}
+
 .sidebar__button--active .sidebar__button-line:nth-of-type(1) {
     transform: rotate(45deg) translate(4px, 4px);
     background-color: var(--green-500);
@@ -98,7 +107,7 @@ body {
     background-color: white;
     transition: right 0.5s ease;
     overflow: auto;
-    z-index: 9;
+    z-index: 10;
 }
 
 #overlay {
@@ -114,6 +123,51 @@ body {
     display: flex;
 }
 
+.floating-nav-menu {
+    position: fixed;
+    top: 5%;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    opacity: 0;
+    transition: all 0.4s ease;
+    z-index: 9;
+    pointer-events: none;
+}
+
+.floating-nav-menu--visible {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.floating-nav-menu__content {
+    box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.25);
+}
+
+.floating-nav__item {
+    position: relative;
+    padding: 10px 20px;
+    cursor: pointer;
+    color: var(--green-1000);
+    transition: color 0.3s ease;
+    z-index: 4;
+}
+
+.floating-nav__item--active {
+    color: var(--green-100);
+}
+
+.floating-nav-menu__indicator {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 50px;
+    background-color: var(--green-600);
+    z-index: 2;
+    transition: transform 0.5s ease;
+}
 
 .overlay--active {
     opacity: 0.4 !important;
