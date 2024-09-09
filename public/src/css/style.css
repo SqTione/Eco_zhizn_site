@@ -217,6 +217,10 @@ body {
     align-self: end;
 }
 
+.swiper__content {
+    height: 100%;
+}
+
 .swiper-navigation {
     align-items: center;
 }
