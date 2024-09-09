@@ -153,23 +153,29 @@
     </nav>
 </div>
 <section id="about" class="about is-in-floating-nav w-full">
-    <div class="info px-[7.5rem] py-[8rem] xl:px-[2.5rem] md:!px-[1.5rem]">
+    <div class="info relative flex flex-col px-[7.5rem] py-[8rem] xl:px-[2.5rem] md:!px-[1.5rem]">
         <h2 class="subtitle text-green-600">О фестивале</h2>
         <p class="w-2/3 regular-text
+                  md:w-full
                   3sm:pt-[1rem]
-                  2xl:w-full">
-            Наш фестиваль объединяет единомышлеников: людей с бережным отношением к себе,
-            к своему здоровью, к природе.</p>
+                  2xl:w-2/3">
+        Наш фестиваль объединяет единомышлеников: людей с бережным отношением к себе,
+        к своему здоровью, к природе.</p>
         <p class="w-2/3 regular-text
-        3sm:pt-[1rem]
-        2xl:w-full">Присоединяйтесь, и вы окажетесь среди тех,
+                    md:w-full
+                    3sm:pt-[1rem]
+                    2xl:w-2/3">Присоединяйтесь, и вы окажетесь среди тех,
             кто разделяет вместе с вами эти взгляды.</p>
+        <img src="src/images/bear.png" alt=""
+             class="absolute top-1/4 right-0 w-[350px]
+                    md:static md:self-center md:pt-6 md:w-[400px]">
     </div>
     <div class="about__reasons w-full px-[7.5rem] py-[8rem] bg-green-600
                 3sm:py-[4rem]
                 md:!px-[1.5rem]
                 xl:px-[2.5rem]">
-        <h3 class="subtitle w-1/2 2xl:w-3/4 3sm:text-3xl 3sm:pb-1">экофест для тебя, если ты...</h3>
+        <h3 class="subtitle w-1/2 2xl:w-3/4
+                    3sm:w-full 3sm:text-3xl 3sm:pb-1">экофест для тебя, если ты...</h3>
         <div class="about__reasons-list w-full grid grid-cols-2 gap-16 pt-[3rem] pl-[10rem]
                     md:grid-cols-1 md:gap-8 md:pt-[1.5rem] md:pl-[2rem]
                     2xl:pl-[6rem]">
@@ -202,7 +208,7 @@
 </section>
 <section id="program" class="program is-in-floating-nav px-[7.5rem] py-[8rem] xl:px-[2.5rem] md:!px-[1.5rem] 3sm:py-[4rem]">
     <h2 class="subtitle text-green-600">Программа фестиваля</h2>
-    <div class="program__cards w-full grid grid-cols-3 justify-between gap-10 pt-[5rem]
+    <div class="program__cards w-full grid grid-cols-3 justify-between gap-10
                 4sm:gap-4
                 lg:grid-cols-2">
         <div class="card">
